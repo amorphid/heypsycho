@@ -8,17 +8,14 @@ const CustomSubHeader = (props, {currentUser}) => {
   const tagline = Telescope.settings.get("tagline");
 
   return (
-    <div className="header-wrapper">
+    <nav className="sub-header">
 
-      <nav className="sub-header">
+      <div className="logo">
+        <Telescope.components.Logo siteTitle={siteTitle} />
+        {tagline ? <h2 className="tagline">{tagline}</h2> : "" }
+      </div>
 
-        <div className="logo">
-          <Telescope.components.Logo siteTitle={siteTitle} />
-          {tagline ? <h2 className="tagline">{tagline}</h2> : "" }
-        </div>
-
-      </nav>
-    </div>
+    </nav>
   )
 }
 
