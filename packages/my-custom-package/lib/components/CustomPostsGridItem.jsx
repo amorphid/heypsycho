@@ -8,7 +8,7 @@ import { Link } from 'react-router';
 // import { ModalTrigger } from "meteor/nova:core";
 // import Categories from "meteor/nova:categories";
 
-class CustomPostsItem extends Telescope.components.PostsItem {
+class CustomPostsGridItem extends Telescope.components.PostsItem {
 
   render() {
 
@@ -19,7 +19,7 @@ class CustomPostsItem extends Telescope.components.PostsItem {
 
     // ⭐ custom code starts here ⭐
     if (post.color) {
-      postClass += " post-"+post.color;
+      postClass += " post-"+post.color+" grid";
     }
     // ⭐ custom code ends here ⭐
 
@@ -63,12 +63,12 @@ class CustomPostsItem extends Telescope.components.PostsItem {
   }
 }
 
-CustomPostsItem.propTypes = {
+CustomPostsGridItem.propTypes = {
   post: React.PropTypes.object.isRequired
 }
 
-CustomPostsItem.contextTypes = {
+CustomPostsGridItem.contextTypes = {
   currentUser: React.PropTypes.object
 };
 
-export default CustomPostsItem;
+export default CustomPostsGridItem;
