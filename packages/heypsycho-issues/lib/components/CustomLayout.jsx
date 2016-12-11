@@ -9,7 +9,7 @@ class CustomLayout extends Telescope.components.Layout {
 
     let currentLocation = this.props.router.getCurrentLocation();
     let pathname = currentLocation.pathname;
-    
+
     return (
       <div className="wrapper" id="wrapper">
 
@@ -26,8 +26,8 @@ class CustomLayout extends Telescope.components.Layout {
 
           <FlashContainer component={Telescope.components.FlashMessages}/>
 
-          { pathname == '/' ? <Telescope.components.Newsletter /> : ""}
-          
+          {/* pathname == '/' ? <Telescope.components.Newsletter /> : "" */}
+
           {this.props.children}
 
         </div>
