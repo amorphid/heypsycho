@@ -1,0 +1,16 @@
+.title-block {
+  background: #192F9E;
+  color: #fff !important;
+  text-align: center;
+
+  h2 {
+    margin-bottom: $lead-double;
+  }
+}
+
+.logo-text,
+.tagline,
+.title-block,
+.title-block a {
+  color: #fff !important;
+}

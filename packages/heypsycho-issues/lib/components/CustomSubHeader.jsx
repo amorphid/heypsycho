@@ -8,7 +8,7 @@ const CustomSubHeader = (props, {currentUser}) => {
   const tagline = Telescope.settings.get("tagline");
 
   return (
-    <nav className="sub-header">
+    <nav className="site-title">
 
       <div className="row center-xs">
         <div className="col-sm-8">

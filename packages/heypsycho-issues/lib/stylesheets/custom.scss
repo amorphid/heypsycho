@@ -6,6 +6,7 @@
 
 @import 'vendor/grid';
 
+@import 'components/nav';
 @import 'components/cards';
 
 .post-red{
@@ -19,15 +20,4 @@
 }
 .post-green{
   background-color: #D2FFD2;
-}
-// For JAKE
-
-body {
-  background: palette(default, lightest);
-}
-
-.header-wrapper {
-  background: white;
-  border: 0;
-  box-shadow: $shadow-default;
 }
