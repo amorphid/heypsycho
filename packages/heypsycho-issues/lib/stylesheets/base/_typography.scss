@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,400i,700,700i');
+
+$type-ratio: 1.333;
+$type-base: 18px;
+$type-line: 24px;
+
+$type-scale-0: round($type-base / $type-ratio);
+$type-scale-1: round($type-base);
+$type-scale-2: round($type-base * $type-ratio);
+$type-scale-3: round($type-base * $type-ratio * $type-ratio);
+$type-scale-4: round($type-base * $type-ratio * $type-ratio * $type-ratio);
+
+$header-stack: 'Open Sans Condensed', sans-serif;
+$body-stack:   'Open Sans', sans-serif;
+
+.type-header {
+  font-family: $header-stack;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: $type-scale-4;
+}
+
+.type-body {
+  font-family: $body-stack;
+  font-weight: 400;
+
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  @extend .type-header;
+}
+
+h2,
+h3 {
+  font-size: $type-scale-2;
+}
+
+h3 {
+  font-weight: bold;
+}
