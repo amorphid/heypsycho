@@ -4,7 +4,7 @@
   background-size: cover;
   color: #fff !important;
   text-align: center;
-
+  background-position: center right;
   h2 {
     margin-bottom: $lead-double;
   }
@@ -20,6 +20,7 @@
 .logo-image {
   width: 48px;
   height: 48px;
+  margin:0;
   img, a {
     display: block;
     width: 100%;
