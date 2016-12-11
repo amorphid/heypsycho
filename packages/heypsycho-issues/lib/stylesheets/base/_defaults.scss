@@ -16,6 +16,7 @@ body {
 .btn {
   &-primary {
     background-color: palette(default, accent) !important;
+    border: none;
     &:hover {
       background-color: palette(default, darkest) !important;
     }

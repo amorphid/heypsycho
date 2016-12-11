@@ -45,7 +45,7 @@ class IssuesItem extends Telescope.components.PostsItem {
                 </h1>
               </div>
 
-              <div className="row center-xs lead-single">
+              <div className="row center-xs lead-double">
                 <div className="col-xs-11">
                   <div className="posts-item-consequences">
                     <div className="row">
@@ -89,9 +89,9 @@ class IssuesItem extends Telescope.components.PostsItem {
               <div className="row center-xs">
                 <div className="col-sm-10">
 
-                  <p>
+                  <div className="lead-double">
                     {post.body}
-                  </p>
+                  </div>
 
 
                   {/* Post meta stuff
