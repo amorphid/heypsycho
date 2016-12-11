@@ -32,7 +32,7 @@ class CustomLayout extends Telescope.components.Layout {
 
         </div>
 
-        <Telescope.components.Footer {...this.props}/>
+        {/* <Telescope.components.Footer {...this.props}/> */}
 
       </div>
     )

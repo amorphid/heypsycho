@@ -4,6 +4,7 @@
   border: 0;
   box-shadow: 0 12px 24px rgba(#3C4DCC, 0.18);
   padding: 0;
+  margin-bottom: $lead-single;
 }
 
 .posts-thumbnail {
@@ -15,6 +16,18 @@
     height: auto;
     border-radius: 0.25rem 0.25rem 0 0;
   }
+}
+
+.posts-list-cat-title-wrap {
+  background: #fff;
+  text-align: center;
+  padding: $lead-single;
+  box-shadow: 0 12px 24px rgba(#3C4DCC, 0.18);
+  margin-bottom: $lead-double;
+}
+
+.posts-list-cat-title {
+  margin: 0;
 }
 
 .posts-item-content {

@@ -2,3 +2,8 @@ body {
   @extend .type-body;
   background: palette(default, lightest);
 }
+
+.main {
+  padding: 0 0 $lead-double;
+  margin: 0;
+}
