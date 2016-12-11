@@ -30,7 +30,9 @@ Package.onUse( function(api) {
 
   api.addAssets([
     'lib/server/emails/customNewPost.handlebars',
-    'lib/server/emails/customEmail.handlebars'
+    'lib/server/emails/customEmail.handlebars',
+    'public/img/logo.png',
+    'public/img/issues-header-bg.png'
   ], ['server']);
 
 });
