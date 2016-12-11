@@ -5,7 +5,6 @@ const CustomHeader = (props, {currentUser}) => {
   
   let currentLocation = props.router.getCurrentLocation();
   let pathname = currentLocation.pathname;
-  console.log("currentLocation:", currentLocation);
   
   const logoUrl = Telescope.settings.get("logoUrl");
   const siteTitle = Telescope.settings.get("title", "Nova");
