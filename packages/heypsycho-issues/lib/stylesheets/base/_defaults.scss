@@ -12,3 +12,24 @@ body {
 .text-left   { text-align: left; }
 .text-center { text-align: center; }
 .text-right  { text-align: right; }
+
+.btn {
+  &-primary {
+    background-color: palette(default, accent) !important;
+    &:hover {
+      background-color: palette(default, darkest) !important;
+    }
+  }
+
+  &-secondary {
+    border-color: palette(default, accent) !important;
+    &:hover {
+      border-color: palette(default, darkest) !important;
+      background-color: palette(default, lightest) !important;
+    }
+  }
+}
+
+.upvote-button {
+  @extend .btn-secondary !optional;
+}

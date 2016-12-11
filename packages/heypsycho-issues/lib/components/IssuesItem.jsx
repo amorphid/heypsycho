@@ -34,14 +34,17 @@ class IssuesItem extends Telescope.components.PostsItem {
 
           <div className="posts-item-content--single">
 
-            <h1 className="posts-item-title">
-              <Link to={Posts.getLink(post)} className="posts-item-title-link" target={Posts.getLinkTarget(post)}>
-                {post.title}
-              </Link>
-              {this.renderCategories()}
-            </h1>
-
             <div className="container">
+
+              <div className="row center-xs">
+                <h1 className="posts-item-title">
+                  <Link to={Posts.getLink(post)} className="posts-item-title-link" target={Posts.getLinkTarget(post)}>
+                    {post.title}
+                  </Link>
+                  {this.renderCategories()}
+                </h1>
+              </div>
+
               <div className="row center-xs lead-single">
                 <div className="col-xs-11">
                   <div className="posts-item-consequences">
@@ -63,6 +66,8 @@ class IssuesItem extends Telescope.components.PostsItem {
                         <p className="text-center lead-single">No official response yet&hellip;</p>
                         <p className="text-center lead-single">
                           Do you represent the organization?
+                        </p>
+                        <p className="text-center lead-double">
                           <a className="btn btn-secondary" href="#">Respond</a>
                         </p>
                       </div>
