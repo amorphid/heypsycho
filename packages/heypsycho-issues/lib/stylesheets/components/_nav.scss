@@ -39,3 +39,12 @@
   text-transform: uppercase;
   margin: 0 1rem;
 }
+
+.tagline {
+  font-size: $type-scale-1;
+  font-family: $body-stack;
+  text-transform: none;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 1.5rem!important;
+}

@@ -43,7 +43,7 @@ const IssuesPage = ({document, currentUser}) => {
         </div>
 
         <div className="col-sm-6">
-          <Telescope.components.IssuesStoriesHeader type="Grievances"/>             
+          <Telescope.components.IssuesStoriesHeader type="Grievances"/>            
           <ListContainer
             collection={Posts}
             publication="posts.list"
