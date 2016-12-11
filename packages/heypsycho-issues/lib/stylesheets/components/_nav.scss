@@ -14,3 +14,28 @@
 .title-block a {
   color: #fff !important;
 }
+
+.logo-image {
+  width: 48px;
+  height: 48px;
+  img, a {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.main-nav {
+  padding: 1rem 0 .5rem 0;
+}
+
+.nav li, .nav .users-account-menu .btn{
+  list-style-type: none;
+  line-height: 24px;
+  font-size: 15px;
+  font-family: $header-stack;
+  letter-spacing: .5px;
+  color: #FFB2FF;
+  text-transform: uppercase;
+  margin: 0 1rem;
+}
