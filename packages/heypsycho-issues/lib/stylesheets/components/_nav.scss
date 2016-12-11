@@ -4,7 +4,7 @@
   background-size: cover;
   color: #fff !important;
   text-align: center;
-
+  background-position: center right;
   h2 {
     margin-bottom: $lead-double;
   }
@@ -20,6 +20,7 @@
 .logo-image {
   width: 48px;
   height: 48px;
+  margin:0;
   img, a {
     display: block;
     width: 100%;
@@ -40,4 +41,13 @@
   color: #FFB2FF;
   text-transform: uppercase;
   margin: 0 1rem;
+}
+
+.tagline {
+  font-size: $type-scale-1;
+  font-family: $body-stack;
+  text-transform: none;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 1.5rem!important;
 }

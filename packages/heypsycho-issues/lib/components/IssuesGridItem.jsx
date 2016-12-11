@@ -41,16 +41,20 @@ class IssuesGridItem extends Telescope.components.PostsItem {
               {this.renderCategories()}
             </h3>
 
-            <div className="posts-item-meta">
-              {post.user? <div className="posts-item-user"><Telescope.components.UsersAvatar user={post.user} size="small"/><Telescope.components.UsersName user={post.user}/></div> : null}
+            <p className="posts-item-excerpt">
+              {post.excerpt}
+            </p>
+
+            <div className="posts-item-meta lead-double">
+              {/*post.user? <div className="posts-item-user"><Telescope.components.UsersAvatar user={post.user} size="small"/><Telescope.components.UsersName user={post.user}/></div> : null */}
               <div className="posts-item-date"><FormattedRelative value={post.postedAt}/></div>
-              <div className="posts-item-comments">
+              {/*<div className="posts-item-comments">
                 <Link to={Posts.getPageUrl(post)}>
                   <FormattedMessage id="comments.count" values={{count: post.commentCount}}/>
                 </Link>
-              </div>
-              {this.context.currentUser && this.context.currentUser.isAdmin ? <Telescope.components.PostsStats post={post} /> : null}
-              {this.renderActions()}
+              </div>*/}
+              {/*this.context.currentUser && this.context.currentUser.isAdmin ? <Telescope.components.PostsStats post={post} /> : null */}
+              {/*this.renderActions()*/}
             </div>
 
             <div className="posts-item-vote">
@@ -58,7 +62,7 @@ class IssuesGridItem extends Telescope.components.PostsItem {
               <Telescope.components.Vote post={post} />
             </div>
 
-            {this.renderCommenters()}
+            {/* this.renderCommenters() */}
 
           </div>
 
