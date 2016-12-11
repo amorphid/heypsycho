@@ -1,6 +1,7 @@
 import Telescope from 'meteor/nova:lib';
 import React from 'react';
 import Posts from "meteor/nova:posts";
+import Categories from "meteor/nova:categories";
 import { ListContainer } from "meteor/utilities:react-list-container";
 
 
@@ -9,9 +10,18 @@ const IssuesPage = ({document, currentUser}) => {
   const post = document;
   const htmlBody = {__html: post.htmlBody};
 
+  const praiseCategoryId = Categories.findOne({name: 'Praises'})._id;
+  const grievancesCategoryId = Categories.findOne({name: 'Grievances'})._id;
+
   const params = {};
   const {selector, options} = Posts.parameters.get(params);
-
+  
+  const praisesSelector = Object.assign({}, selector);
+  praisesSelector['categories'] = praiseCategoryId;
+  
+  const grievancesSelector = Object.assign({}, selector);
+  grievancesSelector['categories'] = grievancesCategoryId;
+  
   return (
     <div className="posts-page">
 
@@ -28,7 +38,7 @@ const IssuesPage = ({document, currentUser}) => {
           <ListContainer
             collection={Posts}
             publication="posts.list"
-            selector={selector}
+            selector={praisesSelector}
             options={options}
             terms={params}
             joins={Posts.getJoins()}
@@ -44,7 +54,7 @@ const IssuesPage = ({document, currentUser}) => {
           <ListContainer
             collection={Posts}
             publication="posts.list"
-            selector={selector}
+            selector={grievancesSelector}
             options={options}
             terms={params}
             joins={Posts.getJoins()}
