@@ -25,11 +25,11 @@ const IssuesPage = ({document, currentUser}) => {
   return (
     <div className="posts-page">
 
-      <Telescope.components.HeadTags url={Posts.getLink(post)} title={post.title} image={post.thumbnailUrl} />
+      <div className="row">
+        <Telescope.components.HeadTags url={Posts.getLink(post)} title={post.title} image={post.thumbnailUrl} />
+      </div>
 
       <Telescope.components.IssuesItem post={post}/>
-
-      {post.htmlBody ? <div className="posts-page-body" dangerouslySetInnerHTML={htmlBody}></div> : null}
 
       <div className="stories-lists row">
 
@@ -50,7 +50,7 @@ const IssuesPage = ({document, currentUser}) => {
         </div>
 
         <div className="col-sm-6">
-          <Telescope.components.IssuesStoriesHeader type="Grievances"/>            
+          <Telescope.components.IssuesStoriesHeader type="Grievances"/>
           <ListContainer
             collection={Posts}
             publication="posts.list"

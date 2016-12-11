@@ -22,7 +22,7 @@ class IssuesItem extends Telescope.components.PostsItem {
       postClass += " post-"+post.color+" grid";
     }
 
-    postClass += " col-xs-6 col-sm-4";
+    postClass += " single-issue";
     // ⭐ custom code ends here ⭐
 
     return (
@@ -40,6 +40,16 @@ class IssuesItem extends Telescope.components.PostsItem {
               </Link>
               {this.renderCategories()}
             </h3>
+
+            <div className="posts-item-consequences">
+              <h2>Consequences go here</h2>
+            </div>
+
+            <div className="row center-xs">
+              <div className="col-sm-10">
+                {post.body}
+              </div>
+            </div>
 
             <div className="posts-item-meta">
               {post.user? <div className="posts-item-user"><Telescope.components.UsersAvatar user={post.user} size="small"/><Telescope.components.UsersName user={post.user}/></div> : null}
