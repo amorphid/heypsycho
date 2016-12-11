@@ -1,29 +1,33 @@
 import Telescope from 'meteor/nova:lib';
 import React, { PropTypes, Component } from 'react';
 import { FlashContainer } from "meteor/nova:core";
+import { withRouter } from 'react-router'
 
 class CustomLayout extends Telescope.components.Layout {
 
   render() {
 
+    let currentLocation = this.props.router.getCurrentLocation();
+    let pathname = currentLocation.pathname;
+    
     return (
       <div className="wrapper" id="wrapper">
 
         <Telescope.components.HeadTags />
 
-        <Telescope.components.UsersProfileCheck {...this.props} />
+        <Telescope.components.UsersProfileCheck {...this.props } />
 
         <header className="title-block">
           <Telescope.components.Header {...this.props}/>
-          <Telescope.components.SubHeader {...this.props}/>
+          { pathname == '/' ? <Telescope.components.SubHeader {...this.props}/> : ""}
         </header>
 
         <div className="main">
 
           <FlashContainer component={Telescope.components.FlashMessages}/>
 
-          <Telescope.components.Newsletter />
-
+          { pathname == '/' ? <Telescope.components.Newsletter /> : ""}
+          
           {this.props.children}
 
         </div>
@@ -37,4 +41,4 @@ class CustomLayout extends Telescope.components.Layout {
 
 }
 
-export default CustomLayout;
+export default withRouter(CustomLayout);
