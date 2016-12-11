@@ -27,6 +27,8 @@ const IssuesPage = ({document, currentUser}) => {
       <div className="stories-lists row">
       
         <div className="span5 offset1">
+          <Telescope.components.IssuesStoriesHeader type="Praises"/> 
+
           <ListContainer
             collection={Posts}
             publication="posts.list"
@@ -42,6 +44,8 @@ const IssuesPage = ({document, currentUser}) => {
         </div>
             
         <div className="span5 offset1">
+          <Telescope.components.IssuesStoriesHeader type="Grievances"/> 
+            
           <ListContainer
             collection={Posts}
             publication="posts.list"
