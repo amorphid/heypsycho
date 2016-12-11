@@ -1,3 +1,7 @@
+@import 'tools/vars';
+@import 'tools/palette';
+@import 'vendor/grid';
+
 .post-red{
   background-color: #FFD3D2;
 }
@@ -11,6 +15,13 @@
   background-color: #D2FFD2;
 }
 // For JAKE
-.sub-header{
-  width: 400px;
+
+body {
+  background: palette(default, lightest);
+}
+
+.header-wrapper {
+  background: white;
+  border: 0;
+  box-shadow: $shadow-default;
 }

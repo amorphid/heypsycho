@@ -1,0 +1,17 @@
+// TC color palette
+
+$palettes: (
+
+  // default
+  default:(
+    lightest:     #E1E7E9,
+    lighter:      #CAD7DC,
+    light:        #7C7E80,
+    mid:          #474C4E,
+    accent:       #9BDBE1
+  )
+);
+
+@function palette($palette, $tone: 'default') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
