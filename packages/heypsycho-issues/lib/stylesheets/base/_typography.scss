@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,400i,700,700i');
 
-$type-ratio: 1.333;
-$type-base: 18px;
-$type-line: 24px;
-
 $type-scale-0: round($type-base / $type-ratio);
 $type-scale-1: round($type-base);
 $type-scale-2: round($type-base * $type-ratio);
