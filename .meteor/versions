@@ -37,6 +37,7 @@ email@1.1.18
 fortawesome:fontawesome@4.7.0
 fourseven:scss@3.10.1
 geojson-utils@1.0.10
+heypsycho:issues@0.0.0
 hot-code-push@1.0.4
 html-tools@1.0.11
 htmljs@1.0.11
@@ -67,7 +68,6 @@ modules@0.7.7
 modules-runtime@0.7.7
 mongo@1.1.14
 mongo-id@1.0.6
-my-custom-package@0.0.0
 nova:api@0.27.5-nova
 nova:base-components@0.27.5-nova
 nova:base-routes@0.27.5-nova

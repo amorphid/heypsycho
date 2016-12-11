@@ -1,5 +1,5 @@
 Package.describe({
-  name: "my-custom-package"
+  name: "heypsycho:issues"
 });
 
 Package.onUse( function(api) {
