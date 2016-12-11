@@ -32,7 +32,8 @@ Package.onUse( function(api) {
     'lib/server/emails/customNewPost.handlebars',
     'lib/server/emails/customEmail.handlebars',
     '../../public/img/logo.png',
-    '../../public/img/issues-header-bg.png'
+    '../../public/img/issues-header-bg.png',
+    '../../public/img/favicon.ico'
   ], ['server']);
 
 });
