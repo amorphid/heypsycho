@@ -4,8 +4,6 @@ import Categories from "meteor/nova:categories";
 
 const IssuesStoriesHeader = ({type}) => {
   
-  console.log("type", type);
-  
   return (
     <div className="stories-header">{type}</div>
   )
