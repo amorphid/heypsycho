@@ -77,7 +77,7 @@ class IssuesItem extends Telescope.components.PostsItem {
                         <div className="amplify">
                           <h3 className="text-center lead-single">Do you have a story to share,<br />or can you help us amplify our voices?</h3>
                           <p className="text-center">
-                            <a className="btn btn-secondary" href="#">Join us</a>
+                            <a className="btn btn-primary" href="#">Join us</a>
                           </p>
                         </div>
                       </div>

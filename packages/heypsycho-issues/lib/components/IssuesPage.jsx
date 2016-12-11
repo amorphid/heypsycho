@@ -71,7 +71,7 @@ const IssuesPage = ({document, currentUser}) => {
         </div>
       </div>
 
-      <Telescope.components.PostsCommentsThread document={post} />
+      {/* <Telescope.components.PostsCommentsThread document={post} /> */ }
 
     </div>
   )

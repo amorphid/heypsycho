@@ -17,8 +17,10 @@ body {
   &-primary {
     background-color: palette(default, accent) !important;
     border: none;
+    color: #fff !important;
     &:hover {
       background-color: palette(default, darkest) !important;
+      color: #fff !important;
     }
   }
 
@@ -31,6 +33,9 @@ body {
   }
 }
 
+.posts-new-button {
+  background-color: lighten(palette(default, accent), 10%) !important;
+}
 .upvote-button {
   @extend .btn-secondary !optional;
 }
