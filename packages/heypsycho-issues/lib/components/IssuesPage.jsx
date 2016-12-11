@@ -1,11 +1,19 @@
 import Telescope from 'meteor/nova:lib';
 import React from 'react';
 import Posts from "meteor/nova:posts";
+import { ListContainer } from "meteor/utilities:react-list-container";
+
 
 const IssuesPage = ({document, currentUser}) => {
   
   const post = document;
   const htmlBody = {__html: post.htmlBody};
+  
+  const params = {};
+  const {selector, options} = Posts.parameters.get(params);
+  console.log("selector", selector);
+  console.log("options", options);
+  
 
   return (
     <div className="posts-page">
@@ -16,8 +24,40 @@ const IssuesPage = ({document, currentUser}) => {
 
       {post.htmlBody ? <div className="posts-page-body" dangerouslySetInnerHTML={htmlBody}></div> : null}
 
-      {/*<SocialShare url={ Posts.getLink(post) } title={ post.title }/>*/}
-
+      <div className="stories-lists row">
+      
+        <div className="span5 offset1">
+          <ListContainer
+            collection={Posts}
+            publication="posts.list"
+            selector={selector}
+            options={options}
+            terms={params}
+            joins={Posts.getJoins()}
+            component={Telescope.components.IssuesStoriesList}
+            cacheSubscription={true}
+            listId="praise"
+            limit={Telescope.settings.get("postsPerPage", 10)}
+          />
+        </div>
+            
+        <div className="span5 offset1">
+          <ListContainer
+            collection={Posts}
+            publication="posts.list"
+            selector={selector}
+            options={options}
+            terms={params}
+            joins={Posts.getJoins()}
+            component={Telescope.components.IssuesStoriesList}
+            cacheSubscription={true}
+            listId="grievance"
+            limit={Telescope.settings.get("postsPerPage", 10)}
+          />
+        </div>
+        
+      </div>
+        
       <Telescope.components.PostsCommentsThread document={post} />
 
     </div>

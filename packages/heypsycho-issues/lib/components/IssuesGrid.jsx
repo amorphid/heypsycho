@@ -10,7 +10,7 @@ const IssuesGrid = ({results, currentUser, hasMore, ready, count, totalCount, lo
 
     return (
       <div className="posts-list container">
-        {showHeader ? <Telescope.components.PostsListHeader /> : null}
+        {showHeader ? <Telescope.components.IssuesGridHeader /> : null}
         <div className="posts-list-content posts-grid row">
           {results.map(post => <Telescope.components.IssuesGridItem post={post} key={post._id}/>)}
         </div>
