@@ -3,7 +3,7 @@ import React, { PropTypes, Component } from 'react';
 import { ListContainer /* , DocumentContainer */ } from "meteor/utilities:react-list-container";
 import Posts from "meteor/nova:posts";
 
-class CustomPostsHome extends Telescope.components.PostsHome {
+class IssuesHome extends Telescope.components.PostsHome {
 
   render() {
 
@@ -27,4 +27,4 @@ class CustomPostsHome extends Telescope.components.PostsHome {
   }
 }
 
-export default CustomPostsHome;
+export default IssuesHome;
