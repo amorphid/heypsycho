@@ -19,8 +19,8 @@ $lead-double:     $type-line * 2;
 $lead-triple:     $type-line * 3;
 $lead-quadruple:  $type-line * 4;
 
-.lead-half       {margin-bottom: $lead-half;}
-.lead-single     {margin-bottom: $lead-single;}
-.lead-double     {margin-bottom: $lead-double;}
-.lead-triple     {margin-bottom: $lead-triple;}
-.lead-quadruple  {margin-bottom: $lead-quadruple;}
+.lead-half       {margin-bottom: $lead-half !important;}
+.lead-single     {margin-bottom: $lead-single !important;}
+.lead-double     {margin-bottom: $lead-double !important;}
+.lead-triple     {margin-bottom: $lead-triple !important;}
+.lead-quadruple  {margin-bottom: $lead-quadruple !important;}

@@ -11,11 +11,18 @@
 
 .posts-item-consequences {
   @extend .card;
-  padding: $lead-single;
+  padding: $lead-single $lead-single 0;
+  margin-bottom: $lead-double;
 
   &--left {
     border-width: 0 1px 0 0;
     border-style: solid;
     border-color: palette(default, lightest);
   }
+}
+
+.amplify {
+  border: 1px solid palette(default, accent);
+  border-radius: 3px;
+  padding: $lead-single * 1.5;
 }

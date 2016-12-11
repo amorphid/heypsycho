@@ -44,13 +44,37 @@ class IssuesItem extends Telescope.components.PostsItem {
             <div className="row center-xs lead-single">
               <div className="col-xs-11">
                 <div className="posts-item-consequences">
-                  <div className="col-xs-6 posts-item-consequences--left">
-                    <h3 className="text-center lead-single">Consequences</h3>
-                    <p className="text-center lead-single">If left unaddressed, BAD STUFF WILL HAPPEN</p>
+                  <div className="row">
+                    <div className="col-xs-6 posts-item-consequences--left lead-single">
+                      <h3 className="text-center lead-single">Consequences</h3>
+                      <p className="text-center lead-single">
+                        Until we hear from the company, we're going to take collective
+                        action to ensure our voices are heard. Join us.
+                      </p>
+                      <ul>
+                        <li><strong>100 stories</strong>: We'll issue a press release, designed to get the attention of traditional media outlets</li>
+                        <li><strong>200 stories</strong>: We'll build a facebook ad campaign so people can hear your stories directly</li>
+                        <li><strong>300 stories</strong>: We'll hire a lawyer to begin pursuing legal action</li>
+                      </ul>
+                    </div>
+                    <div className="col-xs-6 posts-item-consequences--right lead-single">
+                      <h3 className="text-center lead-single">Response</h3>
+                      <p className="text-center lead-single">No official response yet&hellip;</p>
+                      <p className="text-center lead-single">
+                        Do you represent the organization?
+                        <a className="btn btn-secondary" href="#">Respond</a>
+                      </p>
+                    </div>
                   </div>
-                  <div className="col-xs-6 posts-item-consequences--right">
-                    <h3 className="text-center lead-single">Response</h3>
-                    <p className="text-center lead-single">No official response yet</p>
+                  <div className="row">
+                    <div className="col-xs">
+                      <div className="amplify">
+                        <h3 className="text-center lead-single">Do you have a story to share,<br />or can you help us amplify our voices?</h3>
+                        <p className="text-center">
+                          <a className="btn btn-secondary" href="#">Join us</a>
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -58,9 +82,11 @@ class IssuesItem extends Telescope.components.PostsItem {
 
             <div className="row center-xs">
               <div className="col-sm-10">
+
                 {post.body}
 
 
+                {/* Post meta stuff
                 <div className="posts-item-meta">
                   {post.user? <div className="posts-item-user"><Telescope.components.UsersAvatar user={post.user} size="small"/><Telescope.components.UsersName user={post.user}/></div> : null}
                   <div className="posts-item-date"><FormattedRelative value={post.postedAt}/></div>
@@ -73,12 +99,13 @@ class IssuesItem extends Telescope.components.PostsItem {
                   {this.renderActions()}
                 </div>
 
+                {this.renderCommenters()}
+                */}
+
                 <div className="posts-item-vote">
                   {/* Create a custom vote component that replaces the up arrow with an eye icon for watching */}
                   <Telescope.components.Vote post={post} />
                 </div>
-
-                {this.renderCommenters()}
 
               </div>
             </div>
