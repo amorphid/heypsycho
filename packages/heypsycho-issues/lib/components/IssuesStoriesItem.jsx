@@ -26,27 +26,28 @@ class IssuesStoriesItem extends Telescope.components.PostsItem {
         <div className="posts-item-vote">
           <Telescope.components.Vote post={post} />
         </div>
+        <div className="card">
+          <div className="posts-item-content">
 
-        <div className="posts-item-content">
-
-          <h3 className="posts-item-title">
-            <Link to={Posts.getLink(post)} className="posts-item-title-link" target={Posts.getLinkTarget(post)}>
-              {post.title}
-            </Link>
-            {this.renderCategories()}
-          </h3>
-
-          <div className="posts-item-meta">
-            {post.user? <div className="posts-item-user"><Telescope.components.UsersAvatar user={post.user} size="small"/><Telescope.components.UsersName user={post.user}/></div> : null}
-            <div className="posts-item-date">{post.postedAt ? <FormattedRelative value={post.postedAt}/> : <FormattedMessage id="posts.dateNotDefined"/>}</div>
-            <div className="posts-item-comments">
-              <Link to={Posts.getPageUrl(post)}>
-                <FormattedMessage id="comments.count" values={{count: post.commentCount}}/>
+            <h3 className="posts-item-title">
+              <Link to={Posts.getLink(post)} className="posts-item-title-link" target={Posts.getLinkTarget(post)}>
+                {post.title}
               </Link>
-            </div>
-            {this.renderActions()}
-          </div>
+              {this.renderCategories()}
+            </h3>
 
+            <div className="posts-item-meta">
+              {post.user? <div className="posts-item-user"><Telescope.components.UsersAvatar user={post.user} size="small"/><Telescope.components.UsersName user={post.user}/></div> : null}
+              <div className="posts-item-date">{post.postedAt ? <FormattedRelative value={post.postedAt}/> : <FormattedMessage id="posts.dateNotDefined"/>}</div>
+              <div className="posts-item-comments">
+                <Link to={Posts.getPageUrl(post)}>
+                  <FormattedMessage id="comments.count" values={{count: post.commentCount}}/>
+                </Link>
+              </div>
+              {this.renderActions()}
+            </div>
+
+          </div>
         </div>
 
         {this.renderCommenters()}
