@@ -13,6 +13,8 @@ import IssuesGrid from "./components/IssuesGrid.jsx";
 import IssuesGridItem from "./components/IssuesGridItem.jsx";
 import IssuesPage from "./components/IssuesPage.jsx";
 import IssuesSingle from "./components/IssuesSingle.jsx";
+import IssuesStoriesList from "./components/IssuesStoriesList.jsx";
+import IssuesStoriesItem from "./components/IssuesStoriesItem.jsx";
 
 Telescope.components.Layout = CustomLayout;
 Telescope.components.Header = CustomHeader;
@@ -23,3 +25,5 @@ Telescope.components.IssuesGrid = IssuesGrid;
 Telescope.components.IssuesGridItem = IssuesGridItem;
 Telescope.components.IssuesPage = IssuesPage;
 Telescope.components.IssuesSingle = IssuesSingle;
+Telescope.components.IssuesStoriesList = IssuesStoriesList;
+Telescope.components.IssuesStoriesItem = IssuesStoriesItem;
