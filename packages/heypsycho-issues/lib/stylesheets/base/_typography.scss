@@ -23,7 +23,7 @@ $body-stack:   'Open Sans', sans-serif;
 .type-body {
   font-family: $body-stack;
   font-weight: 400;
-
+  color: palette(default, light);
 }
 
 b,
@@ -38,10 +38,28 @@ h3 {
 }
 
 h2,
-h3 {
+h2 a,
+h3,
+h3 a {
   font-size: $type-scale-2;
+  color: palette(default, accent) !important;
 }
 
 h3 {
   font-weight: bold;
+}
+
+a {
+  color: palette(default, accent) !important;
+  transition: all 0.25s ease-in;
+
+  &:hover {
+    color: palette(default, darkest) !important;
+    transition: all 0.2s ease-out;
+    text-decoration: none;
+  }
+}
+
+p {
+  font-size: $type-scale-1;
 }

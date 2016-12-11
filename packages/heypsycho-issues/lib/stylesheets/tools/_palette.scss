@@ -4,11 +4,13 @@ $palettes: (
 
   // default
   default:(
-    lightest:     #E1E7E9,
+    lightest:     #E9EBF9,
     lighter:      #CAD7DC,
-    light:        #7C7E80,
+    light:        #767A91,
     mid:          #474C4E,
-    accent:       #9BDBE1
+    darkest:      #000623,
+    accent:       #1A2F9E,
+    shadow:       rgba(#3C4DCC, 0.18)
   )
 );
 
