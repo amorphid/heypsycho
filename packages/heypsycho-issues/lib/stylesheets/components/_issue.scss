@@ -2,9 +2,24 @@
   .posts-thumbnail {
     max-height: 80vh;
     overflow: hidden;
-
+    display: block;
+    position: relative;
+    &:before {
+      content: '';
+      position:absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: palette(default, accent);
+      mix-blend-mode: multiply;
+      opacity: .3;
+    }
     img {
       border-radius: 0;
+      &:before {
+
+      }
     }
   }
 }
