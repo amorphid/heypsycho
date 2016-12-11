@@ -9,13 +9,13 @@ import CustomSubHeader from "./components/CustomSubHeader.jsx";
 import CustomHeader from "./components/CustomHeader.jsx";
 import CustomNewsletter from "./components/CustomNewsletter.jsx";
 import IssuesHome from "./components/IssuesHome.jsx";
-import CustomPostsGrid from "./components/CustomPostsGrid.jsx";
-import CustomPostsGridItem from "./components/CustomPostsGridItem.jsx";
+import IssuesGrid from "./components/IssuesGrid.jsx";
+import IssuesGridItem from "./components/IssuesGridItem.jsx";
 
 Telescope.components.Layout = CustomLayout;
 Telescope.components.Header = CustomHeader;
 Telescope.components.SubHeader = CustomSubHeader;
 Telescope.components.Newsletter = CustomNewsletter;
-Telescope.components.PostsHome = IssuesHome;
-Telescope.components.PostsGrid = CustomPostsGrid;
-Telescope.components.PostsGridItem = CustomPostsGridItem;
+Telescope.components.IssuesHome = IssuesHome;
+Telescope.components.IssuesGrid = IssuesGrid;
+Telescope.components.IssuesGridItem = IssuesGridItem;

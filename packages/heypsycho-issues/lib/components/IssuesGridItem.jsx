@@ -8,7 +8,7 @@ import { Link } from 'react-router';
 // import { ModalTrigger } from "meteor/nova:core";
 // import Categories from "meteor/nova:categories";
 
-class CustomPostsGridItem extends Telescope.components.PostsItem {
+class IssuesGridItem extends Telescope.components.PostsItem {
 
   render() {
 
@@ -63,12 +63,12 @@ class CustomPostsGridItem extends Telescope.components.PostsItem {
   }
 }
 
-CustomPostsGridItem.propTypes = {
+IssuesGridItem.propTypes = {
   post: React.PropTypes.object.isRequired
 }
 
-CustomPostsGridItem.contextTypes = {
+IssuesGridItem.contextTypes = {
   currentUser: React.PropTypes.object
 };
 
-export default CustomPostsGridItem;
+export default IssuesGridItem;

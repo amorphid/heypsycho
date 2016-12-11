@@ -18,7 +18,7 @@ class IssuesHome extends Telescope.components.PostsHome {
         options={options}
         terms={params}
         joins={Posts.getJoins()}
-        component={Telescope.components.PostsGrid}
+        component={Telescope.components.IssuesGrid}
         cacheSubscription={true}
         listId={params.listId}
         limit={Telescope.settings.get("postsPerPage", 10)}
