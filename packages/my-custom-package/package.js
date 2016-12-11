@@ -20,7 +20,8 @@ Package.onUse( function(api) {
   ], ['client', 'server']);
 
   api.addFiles([
-    'lib/stylesheets/custom.scss'
+    'lib/stylesheets/custom.scss',
+    'lib/stylesheets/grid_posts.scss'
   ], ['client']);
 
   api.addFiles([
