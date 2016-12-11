@@ -9,16 +9,16 @@ const CustomSubHeader = (props, {currentUser}) => {
 
   return (
     <nav className="site-title">
-
-      <div className="row center-xs">
-        <div className="col-sm-8">
-          <Telescope.components.Logo siteTitle={siteTitle} />
-        </div>
-        <div className="col-sm-8">
-          {tagline ? <h2 className="tagline">{tagline}</h2> : "" }
+      <div className="container">
+        <div className="row center-xs">
+          <div className="col-sm-8">
+            <Telescope.components.Logo siteTitle={siteTitle} />
+          </div>
+          <div className="col-sm-8">
+            {tagline ? <h2 className="tagline">{tagline}</h2> : "" }
+          </div>
         </div>
       </div>
-
     </nav>
   )
 }
