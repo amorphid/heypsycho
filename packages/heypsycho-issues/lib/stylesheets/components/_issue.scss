@@ -4,3 +4,8 @@
     overflow: hidden;
   }
 }
+
+.posts-item-consequences {
+  @extend .card;
+  padding: $lead-single;
+}

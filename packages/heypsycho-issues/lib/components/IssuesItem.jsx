@@ -32,17 +32,26 @@ class IssuesItem extends Telescope.components.PostsItem {
 
           {post.thumbnailUrl ? <Telescope.components.PostsThumbnail post={post}/> : null}
 
-          <div className="posts-item-content">
+          <div className="posts-item-content--single">
 
-            <h3 className="posts-item-title">
+            <h1 className="posts-item-title">
               <Link to={Posts.getLink(post)} className="posts-item-title-link" target={Posts.getLinkTarget(post)}>
                 {post.title}
               </Link>
               {this.renderCategories()}
-            </h3>
+            </h1>
 
-            <div className="posts-item-consequences">
-              <h2>Consequences go here</h2>
+            <div className="row center-xs">
+              <div className="col-xs-11 col-sm-10">
+                <div className="posts-item-consequences">
+                  <div className="col-xs-6">
+                    <h3>Consequences go here</h3>
+                  </div>
+                  <div className="col-xs-6">
+                    <h3>Responses go here</h3>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="row center-xs">

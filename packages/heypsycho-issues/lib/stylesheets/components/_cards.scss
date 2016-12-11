@@ -5,6 +5,8 @@
   box-shadow: 0 12px 24px rgba(#3C4DCC, 0.18);
   padding: 0;
   margin-bottom: $lead-single;
+  background: #fff;
+  border-radius: 3px;
 }
 
 .posts-thumbnail {
@@ -32,6 +34,10 @@
 
 .posts-item-content {
   padding: $lead-single;
+
+  &--single {
+    padding: 0;
+  }
 }
 
 .posts-item,
