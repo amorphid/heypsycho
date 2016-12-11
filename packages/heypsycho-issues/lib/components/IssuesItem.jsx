@@ -41,14 +41,16 @@ class IssuesItem extends Telescope.components.PostsItem {
               {this.renderCategories()}
             </h1>
 
-            <div className="row center-xs">
-              <div className="col-xs-11 col-sm-10">
+            <div className="row center-xs lead-single">
+              <div className="col-xs-11">
                 <div className="posts-item-consequences">
-                  <div className="col-xs-6">
-                    <h3>Consequences go here</h3>
+                  <div className="col-xs-6 posts-item-consequences--left">
+                    <h3 className="text-center lead-single">Consequences</h3>
+                    <p className="text-center lead-single">If left unaddressed, BAD STUFF WILL HAPPEN</p>
                   </div>
-                  <div className="col-xs-6">
-                    <h3>Responses go here</h3>
+                  <div className="col-xs-6 posts-item-consequences--right">
+                    <h3 className="text-center lead-single">Response</h3>
+                    <p className="text-center lead-single">No official response yet</p>
                   </div>
                 </div>
               </div>
@@ -57,27 +59,29 @@ class IssuesItem extends Telescope.components.PostsItem {
             <div className="row center-xs">
               <div className="col-sm-10">
                 {post.body}
+
+
+                <div className="posts-item-meta">
+                  {post.user? <div className="posts-item-user"><Telescope.components.UsersAvatar user={post.user} size="small"/><Telescope.components.UsersName user={post.user}/></div> : null}
+                  <div className="posts-item-date"><FormattedRelative value={post.postedAt}/></div>
+                  <div className="posts-item-comments">
+                    <Link to={Posts.getPageUrl(post)}>
+                      <FormattedMessage id="comments.count" values={{count: post.commentCount}}/>
+                    </Link>
+                  </div>
+                  {this.context.currentUser && this.context.currentUser.isAdmin ? <Telescope.components.PostsStats post={post} /> : null}
+                  {this.renderActions()}
+                </div>
+
+                <div className="posts-item-vote">
+                  {/* Create a custom vote component that replaces the up arrow with an eye icon for watching */}
+                  <Telescope.components.Vote post={post} />
+                </div>
+
+                {this.renderCommenters()}
+
               </div>
             </div>
-
-            <div className="posts-item-meta">
-              {post.user? <div className="posts-item-user"><Telescope.components.UsersAvatar user={post.user} size="small"/><Telescope.components.UsersName user={post.user}/></div> : null}
-              <div className="posts-item-date"><FormattedRelative value={post.postedAt}/></div>
-              <div className="posts-item-comments">
-                <Link to={Posts.getPageUrl(post)}>
-                  <FormattedMessage id="comments.count" values={{count: post.commentCount}}/>
-                </Link>
-              </div>
-              {this.context.currentUser && this.context.currentUser.isAdmin ? <Telescope.components.PostsStats post={post} /> : null}
-              {this.renderActions()}
-            </div>
-
-            <div className="posts-item-vote">
-              {/* Create a custom vote component that replaces the up arrow with an eye icon for watching */}
-              <Telescope.components.Vote post={post} />
-            </div>
-
-            {this.renderCommenters()}
 
           </div>
 

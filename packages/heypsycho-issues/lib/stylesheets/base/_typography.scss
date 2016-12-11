@@ -33,6 +33,10 @@ h3 {
   @extend .type-header;
 }
 
+h1 {
+  margin-bottom: $lead-double !important;
+}
+
 h2 a,
 h3 a {
   color: palette(default, accent) !important;

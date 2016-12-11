@@ -2,10 +2,20 @@
   .posts-thumbnail {
     max-height: 80vh;
     overflow: hidden;
+
+    img {
+      border-radius: 0;
+    }
   }
 }
 
 .posts-item-consequences {
   @extend .card;
   padding: $lead-single;
+
+  &--left {
+    border-width: 0 1px 0 0;
+    border-style: solid;
+    border-color: palette(default, lightest);
+  }
 }
