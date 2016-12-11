@@ -8,3 +8,13 @@ $container-max-width: 1024px;
 $breakpoint-sm:           768px;
 $breakpoint-md:           1024px;
 $breakpoint-lg:           1200px;
+
+$type-ratio: 1.333;
+$type-base: 18px;
+$type-line: 24px;
+
+$lead-half:       $type-line / 2;
+$lead-single:     $type-line;
+$lead-double:     $type-line * 2;
+$lead-triple:     $type-line * 3;
+$lead-quadruple:  $type-line * 4;

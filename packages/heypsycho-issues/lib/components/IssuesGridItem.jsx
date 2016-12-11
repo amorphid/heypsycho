@@ -21,42 +21,48 @@ class IssuesGridItem extends Telescope.components.PostsItem {
     if (post.color) {
       postClass += " post-"+post.color+" grid";
     }
+
+    postClass += " col-xs-6 col-sm-4";
     // ⭐ custom code ends here ⭐
 
     return (
       <div className={postClass}>
 
-        <div className="posts-item-vote">
-          <Telescope.components.Vote post={post} />
-        </div>
+        <div className="card">
 
-        {post.thumbnailUrl ? <Telescope.components.PostsThumbnail post={post}/> : null}
+          {post.thumbnailUrl ? <Telescope.components.PostsThumbnail post={post}/> : null}
 
-        <div className="posts-item-content">
+          <div className="posts-item-content">
 
-          <h3 className="posts-item-title">
-            <Link to={Posts.getLink(post)} className="posts-item-title-link" target={Posts.getLinkTarget(post)}>
-              {post.title}
-            </Link>
-            {this.renderCategories()}
-          </h3>
-
-          <div className="posts-item-meta">
-            {post.user? <div className="posts-item-user"><Telescope.components.UsersAvatar user={post.user} size="small"/><Telescope.components.UsersName user={post.user}/></div> : null}
-            <div className="posts-item-date"><FormattedRelative value={post.postedAt}/></div>
-            <div className="posts-item-comments">
-              <Link to={Posts.getPageUrl(post)}>
-                <FormattedMessage id="comments.count" values={{count: post.commentCount}}/>
+            <h3 className="posts-item-title">
+              <Link to={Posts.getLink(post)} className="posts-item-title-link" target={Posts.getLinkTarget(post)}>
+                {post.title}
               </Link>
+              {this.renderCategories()}
+            </h3>
+
+            <div className="posts-item-meta">
+              {post.user? <div className="posts-item-user"><Telescope.components.UsersAvatar user={post.user} size="small"/><Telescope.components.UsersName user={post.user}/></div> : null}
+              <div className="posts-item-date"><FormattedRelative value={post.postedAt}/></div>
+              <div className="posts-item-comments">
+                <Link to={Posts.getPageUrl(post)}>
+                  <FormattedMessage id="comments.count" values={{count: post.commentCount}}/>
+                </Link>
+              </div>
+              {this.context.currentUser && this.context.currentUser.isAdmin ? <Telescope.components.PostsStats post={post} /> : null}
+              {this.renderActions()}
             </div>
-            {this.context.currentUser && this.context.currentUser.isAdmin ? <Telescope.components.PostsStats post={post} /> : null}
-            {this.renderActions()}
+
+            <div className="posts-item-vote">
+              {/* Create a custom vote component that replaces the up arrow with an eye icon for watching */}
+              <Telescope.components.Vote post={post} />
+            </div>
+
+            {this.renderCommenters()}
+
           </div>
 
         </div>
-
-        {this.renderCommenters()}
-
 
       </div>
     )

@@ -1,6 +1,13 @@
 @import 'tools/vars';
 @import 'tools/palette';
+
+@import 'base/typography';
+@import 'base/defaults';
+
 @import 'vendor/grid';
+
+@import 'components/nav';
+@import 'components/cards';
 
 .post-red{
   background-color: #FFD3D2;
@@ -13,15 +20,4 @@
 }
 .post-green{
   background-color: #D2FFD2;
-}
-// For JAKE
-
-body {
-  background: palette(default, lightest);
-}
-
-.header-wrapper {
-  background: white;
-  border: 0;
-  box-shadow: $shadow-default;
 }

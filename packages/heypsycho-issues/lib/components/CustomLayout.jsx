@@ -13,11 +13,12 @@ class CustomLayout extends Telescope.components.Layout {
 
         <Telescope.components.UsersProfileCheck {...this.props} />
 
-        <Telescope.components.Header {...this.props}/>
-      
-        <div className="main">
-      
+        <header className="title-block">
+          <Telescope.components.Header {...this.props}/>
           <Telescope.components.SubHeader {...this.props}/>
+        </header>
+
+        <div className="main">
 
           <FlashContainer component={Telescope.components.FlashMessages}/>
 
@@ -26,9 +27,9 @@ class CustomLayout extends Telescope.components.Layout {
           {this.props.children}
 
         </div>
-      
+
         <Telescope.components.Footer {...this.props}/>
-      
+
       </div>
     )
 
