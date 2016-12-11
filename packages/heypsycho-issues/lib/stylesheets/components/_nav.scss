@@ -43,11 +43,15 @@
   margin: 0 1rem;
 }
 
+.logo-text {
+  margin-bottom: 1rem!important;
+}
+
 .tagline {
-  font-size: $type-scale-1;
-  font-family: $body-stack;
-  text-transform: none;
-  font-weight: 300;
-  line-height: 24px;
+  font-size: $type-scale-1!important;
+  font-family: $body-stack!important;
+  text-transform: none!important;
+  font-weight: 300!important;
+  line-height: 24px!important;
   margin-bottom: 1.5rem!important;
 }
