@@ -9,11 +9,16 @@ const IssuesGrid = ({results, currentUser, hasMore, ready, count, totalCount, lo
   if (!!results.length) {
 
     return (
-      <div className="posts-list container">
-        <div className="posts-list-content posts-grid row">
-          {results.map(post => <Telescope.components.IssuesGridItem post={post} key={post._id}/>)}
+      <div>
+        <div className="posts-list-cat-title-wrap">
+          <h3 className="posts-list-cat-title">Companies</h3>
         </div>
-        {hasMore ? (ready ? <Telescope.components.PostsLoadMore loadMore={loadMore} count={count} totalCount={totalCount} /> : <Telescope.components.PostsLoading/>) : <Telescope.components.PostsNoMore/>}
+        <div className="posts-list container">
+          <div className="posts-list-content posts-grid row">
+            {results.map(post => <Telescope.components.IssuesGridItem post={post} key={post._id}/>)}
+          </div>
+          {hasMore ? (ready ? <Telescope.components.PostsLoadMore loadMore={loadMore} count={count} totalCount={totalCount} /> : <Telescope.components.PostsLoading/>) : <Telescope.components.PostsNoMore/>}
+        </div>
       </div>
     )
   } else if (!ready) {
