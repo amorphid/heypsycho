@@ -3,9 +3,9 @@ import React from 'react';
 import Categories from "meteor/nova:categories";
 
 const IssuesStoriesHeader = ({type}) => {
-  
+
   return (
-    <div className="stories-header">{type}</div>
+    <h3 className="stories-header text-center lead-double">{type}</h3>
   )
 }
 

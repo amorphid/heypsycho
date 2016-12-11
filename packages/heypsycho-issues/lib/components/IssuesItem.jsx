@@ -32,7 +32,7 @@ class IssuesItem extends Telescope.components.PostsItem {
 
           {post.thumbnailUrl ? <Telescope.components.PostsThumbnail post={post}/> : null}
 
-          <div className="posts-item-content--single">
+          <div className="posts-item-content--single lead-double">
 
             <div className="container">
 
